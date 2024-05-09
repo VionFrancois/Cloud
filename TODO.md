@@ -7,8 +7,13 @@
 
 - [ ] Finir la conteneurisation
   - [ ] Clean code Docker
+  
+- [ ] Déployer sur le cloud
+  - [ ] Installer les fichiers
+  - [ ] Config le programme (si nécessaire)
+  - [ ] Configurer les accès avec ports et services 
 
-- [ ] Finir rapport
+- [ ] Faire rapport
   - [ ] Commencer rapport
   - [ ] Avancement rapport
   - [ ] Finir rapport
