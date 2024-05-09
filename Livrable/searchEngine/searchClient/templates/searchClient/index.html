@@ -1,0 +1,6 @@
+<h1>Choisissez un fichier</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Rechercher les images similaires</button>
+</form>
