@@ -3,6 +3,7 @@ from .forms import FileSelectionForm
 import subprocess
 import os
 import matplotlib.pyplot as plt
+from django.contrib.auth.decorators import login_required
 
 def generate_RP(plots):
   x = []
@@ -19,6 +20,7 @@ def generate_RP(plots):
   plt.savefig("searchClient/static/RP.png")
   plt.close()
 
+@login_required
 def index(request):
     results_dir = 'results'
     if request.method == 'POST':
