@@ -11,7 +11,6 @@ def generate_RP(plots):
   for row in plots:
     x.append(float(row[0]))
     y.append(float(row[1]))
-    fig = plt.figure()
   plt.plot(y,x,'C1', label="VGG16");
   plt.xlabel('Rappel')
   plt.ylabel('Précison')
