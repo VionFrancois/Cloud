@@ -1,0 +1,35 @@
+/* Center the button and header */
+.yaacbise-button, h1 {
+    text-align: center;
+}
+
+/* Style the button */
+.yaacbise-button {
+    background-color: #1988f7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Add some space below the button */
+}
+
+.yaacbise-button:hover {
+    background-color: #0d6aad;
+}
+
+/* Create a grid layout for the images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 20px; /* Add some space between images */
+}
+
+/* Style the images */
+.image-grid img {
+    width: 100%; /* Ensure images fill their grid cell */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}

@@ -1,0 +1,74 @@
+/* Site title */
+.site-title {
+    font: small-caps bold 48px/1 sans-serif;
+    margin: 20px 0 10px;
+}
+
+/* Page title */
+.page-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Text fields */
+.text-field {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Button */
+.button {
+    background-color: #1988f7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button:hover {
+    background-color: #0d6aad;
+}
+
+.gallery-wrapper {
+  background-color: #dbdbdb;
+  box-sizing: border-box;
+  height: 295px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.gallery-scroll {
+  box-sizing: border-box;
+  height: 295px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.gallery {
+  background-color: #dbdbdb;
+  display: flex;
+  box-sizing: border-box;
+  width: max-content;
+  height: 270px;
+  padding: 0px 8px;
+}
+
+.item {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 16px 8px;
+}
+
+.item img {
+  display: block;
+  height: 100%;
+}

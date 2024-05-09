@@ -1,5 +1,42 @@
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Register</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="/static/css/register.css">
+</head>
+<body>
+    <div class="site-title">Yaacbise</div>
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="text-field">
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div class="text-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="text-field">
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="text-field">
+            <label for="confirm_password">Confirmer le mot de passe:</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+        </div>
+        <div class="text-field">
+        <ul>
+            <li>Votre mot de passe doit être différent de vos informations personnelles</li>
+            <li>Votre mot de passe doit contenir 8 caractères</li>
+            <li>Votre mot de passe ne peut pas être couramment utilisé</li>
+            <li>Votre mot de passe doit contenir au moins une lettre</li>
+        </ul>
+    </div>
+        <button class="button" type="submit">S'inscrire</button>
+    </form>
+    <p>Vous avez déjà un compte? <a href="{% url 'login' %}">Se connecter</a></p>
+</body>
+</html>
