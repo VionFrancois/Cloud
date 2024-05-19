@@ -1,3 +1,4 @@
 /searchEngine/__pycache__/*
+/searchEngine/searchClient/__pycache__/
 /searchEngine/static/RP.png
 /searchEngine/db.sqlite3

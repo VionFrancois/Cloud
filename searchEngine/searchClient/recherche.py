@@ -29,9 +29,7 @@ def getkVoisins(lfeatures, test, k) :
 
 files = "image.orig"         #Chemin vers la base d'images
 features1 = []               #Stocker les caractérstiques
-big_folder="Features_train/" #Dossier pour stocker les caractéristiques
-if not os.path.exists(big_folder):
-    os.makedirs(big_folder)
+
 
 
 def read_features_from_files(folder_model1, files_folder):
@@ -39,8 +37,7 @@ def read_features_from_files(folder_model1, files_folder):
 
     for txt_file in os.listdir(folder_model1):
         if txt_file.endswith(".txt"):
-            feature_file_path = os.path.join(folder_model1, txt_file)
-            
+            feature_file_path = os.path.join(folder_model1, txt_file)            
             feature = np.loadtxt(feature_file_path)
 
             image_basename = os.path.splitext(txt_file)[0] + ".jpg"
@@ -125,13 +122,11 @@ def search(image_req, top, model):
     folder_model1 += "/" + model
 
     global features1
-    features1 = read_features_from_files(folder_model1, "image.orig/")
+    features1 = read_features_from_files(folder_model1, "")
     nom_image_requete, nom_images_proches, nom_images_non_proches = recherche(image_req, top)
     #compute_RP("RP.txt", top,nom_image_requete, nom_images_non_proches)
     #display_RP("RP.txt", model)
-
+    
     nom_image_requete += ".jpg"
-    for i in range(len(nom_images_proches)):
-       nom_images_proches[i] = nom_images_proches[i][11:]
 
     return nom_image_requete, nom_images_proches, nom_images_non_proches

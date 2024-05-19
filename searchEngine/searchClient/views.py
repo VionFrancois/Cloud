@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from .forms import FileSelectionForm
-import subprocess
 import os
-import matplotlib.pyplot as plt
 from django.contrib.auth.decorators import login_required
 from .recherche import *
 
@@ -22,7 +20,6 @@ def index(request):
                 base_image, images, _ = search(filename[:-4], top, "VGG16")
 
                 images.insert(0, base_image)
-                print(images)
 
                 return render(request, 'searchClient/results.html', {'images': images})
             else:
