@@ -56,7 +56,7 @@
 /* Style the images */
 .image-grid img {
     width: 100%; /* Ensure images fill their grid cell */
-    height: 200px; /* Fixed height for the images */
+    height: auto; /* Fixed height for the images */
     object-fit: cover; /* Maintain aspect ratio and cover the area */
     display: block;
     border-radius: 5px;
