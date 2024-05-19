@@ -1,10 +1,36 @@
 {% load static %}
 
-<h1>Résultats</h1>
-{% for image in images %}
-    <img src="{% static image %}" alt="Image similaire">
-{% endfor %}
-
-<img src="{% static 'RP.png' %}" alt="Courbe de RP">
-
-<p><a href="{% url 'index' %}">Refaire une recherche</a></p>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultats</title>
+    <link rel="stylesheet" href="{% static 'css/results.css' %}">
+</head>
+<body>
+    <div class="site-title">Yaacbise</div>
+    <div class="page-title">Résultats</div>
+    <div class="centered-content">
+        <h3>Courbe de RP</h3>
+        <img src="{% static 'RP.png' %}" alt="Courbe de RP">
+    </div>
+    <div class="centered-content">
+        <h3>Image initiale</h3>
+        <img src="{% static images.0 %}" alt="Image initiale">
+    </div>
+    <div class="centered-content">
+        <h3>Images similaires</h3>
+    </div>
+    <div class="image-grid">
+        {% for image in images|slice:"1:" %}
+            <div class="image-container">
+                <img src="{% static image %}" alt="Image similaire">
+                <span class="image-number">{{ forloop.counter }}</span>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="button-container">
+        <a class="button" href="{% url 'index' %}">Refaire une recherche</a>
+    </div>
+</body>
+</html>

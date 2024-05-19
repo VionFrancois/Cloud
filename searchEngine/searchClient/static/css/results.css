@@ -1,35 +1,75 @@
-/* Center the button and header */
-.yaacbise-button, h1 {
-    text-align: center;
+/* Site title */
+.site-title {
+    font: small-caps bold 48px/1 sans-serif;
+    margin: 20px 0 10px;
 }
 
-/* Style the button */
-.yaacbise-button {
+/* Page title */
+.page-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Center content and add spacing */
+.centered-content {
+    text-align: center;
+    margin-bottom: 40px; /* Add white space below the RP.png picture */
+}
+
+/* Button container */
+.button-container {
+    text-align: center; /* Center the button */
+     margin-top: 40px;
+}
+
+/* Button */
+.button {
+    display: inline-block; /* Display button inline */
+    padding: 8px 20px; /* Adjust padding for smaller button */
+    font-size: 16px;
     background-color: #1988f7;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 20px; /* Add some space below the button */
+    transition: background-color 0.3s ease;
 }
 
-.yaacbise-button:hover {
+.button:hover {
     background-color: #0d6aad;
+    text-decoration: none; /* Remove underline on hover */
 }
 
 /* Create a grid layout for the images */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns of equal width */
     grid-gap: 20px; /* Add some space between images */
+}
+
+/* Style the image container */
+.image-container {
+    position: relative;
 }
 
 /* Style the images */
 .image-grid img {
     width: 100%; /* Ensure images fill their grid cell */
-    height: auto;
+    height: 200px; /* Fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
     display: block;
     border-radius: 5px;
+}
+
+/* Style the image numbers */
+.image-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 16px;
 }

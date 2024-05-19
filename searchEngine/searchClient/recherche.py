@@ -127,8 +127,8 @@ def search(image_req, top, model):
     global features1
     features1 = read_features_from_files(folder_model1, "image.orig/")
     nom_image_requete, nom_images_proches, nom_images_non_proches = recherche(image_req, top)
-    compute_RP("RP.txt", top,nom_image_requete, nom_images_non_proches)
-    display_RP("RP.txt", model)
+    #compute_RP("RP.txt", top,nom_image_requete, nom_images_non_proches)
+    #display_RP("RP.txt", model)
 
     nom_image_requete += ".jpg"
     for i in range(len(nom_images_proches)):
