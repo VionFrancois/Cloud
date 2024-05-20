@@ -1,18 +1,15 @@
-# Utilisez une image Python comme base
 FROM python:3.10
 
-# Définir le répertoire de travail
 WORKDIR /service
 
-# Copier les fichiers nécessaires dans l'image Docker
+# Copy all the necessary files to the container
 COPY searchEngine/ /service/searchEngine/
 
-# Installer les dépendances
 RUN pip install -r /service/searchEngine/requirements.txt
 
+# Opens port 8000
 EXPOSE 8000
 
 RUN chmod +x /service/searchEngine/start.sh
 
-# Commande à exécuter lorsque le conteneur démarre
 CMD ["/service/searchEngine/start.sh"]

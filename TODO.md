@@ -7,7 +7,7 @@
   - [ ] Clean le code
 
 - [ ] Finir la conteneurisation
-  - [ ] Réadapter l'image
+  - [x] Réadapter l'image
   - [ ] Clean code Docker
   
 - [ ] Déployer sur le cloud
