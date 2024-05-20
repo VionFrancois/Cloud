@@ -14,8 +14,9 @@ def register_view(request):
             return redirect('login')
         else:
             # Display the non valid fields
-            for error in form.errors.values():
-                messages.error(request, error)
+            for field, errors in form.errors.items():
+                messages.error(request, f"{field.capitalize()}: {errors[0]}")
+
     else:
         form = UserRegisterForm()
 
@@ -37,9 +38,11 @@ def login_view(request):
         form = UserLoginForm()
     return render(request, 'users/login.html', {'form': form})
 
+
 @login_required
 def index_view(request):
     return redirect('/searchClient/index')
+
 
 @login_required
 def logout_view(request):

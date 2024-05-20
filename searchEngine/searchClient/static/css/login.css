@@ -5,6 +5,11 @@ font: small-caps bold 3em sans-serif;
     margin-top: 20px;
 }
 
+.errors {
+    color: red;
+    text-align: center;
+}
+
 form {
     display: flex;
     flex-direction: column;

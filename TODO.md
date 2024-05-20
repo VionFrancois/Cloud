@@ -5,6 +5,7 @@
     - [x] Ajouter au formulaire le choix du modèle
     - [ ] Ajouter infos demandées dans l'énoncé
   - [x] Finir le style
+    - [ ] TODO dans register.html
   - [ ] Clean et commenter le code
 
 - [x] Finir la conteneurisation
