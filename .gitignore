@@ -3,3 +3,5 @@
 /searchEngine/users/__pycache__/*
 /searchEngine/static/RP.png
 /searchEngine/db.sqlite3
+/searchEngine/RP.txt
+/searchEngine/searchClient/static/RP.png
