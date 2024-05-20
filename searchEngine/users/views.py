@@ -6,19 +6,28 @@ from .forms import UserRegisterForm, UserLoginForm
 
 def register_view(request):
     if request.method == 'POST':
+        # Create a form with the data from the request
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, 'Account created successfully!')
             return redirect('login')
+        else:
+            # Display the non valid fields
+            for error in form.errors.values():
+                messages.error(request, error)
     else:
         form = UserRegisterForm()
+
     return render(request, 'users/register.html', {'form': form})
+
 
 def login_view(request):
     if request.method == 'POST':
+        # Create a form with the data from the request
         form = UserLoginForm(request, data=request.POST)
         if form.is_valid():
+            # Login the user and redirect to the application page
             user = form.get_user()
             login(request, user)
             return redirect('index')
@@ -31,7 +40,6 @@ def login_view(request):
 @login_required
 def index_view(request):
     return redirect('/searchClient/index')
-    # return render(request, 'searchClient/index.html')
 
 @login_required
 def logout_view(request):

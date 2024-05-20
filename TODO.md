@@ -2,13 +2,14 @@
 
 - [ ] Finir le code Django
   - [ ] Finir le fonctionnement pur
-    - [ ] Ajouter au formulaire le choix du modèle
-  - [ ] Finir le style
-  - [ ] Clean le code
+    - [x] Ajouter au formulaire le choix du modèle
+    - [ ] Ajouter infos demandées dans l'énoncé
+  - [x] Finir le style
+  - [ ] Clean et commenter le code
 
-- [ ] Finir la conteneurisation
+- [x] Finir la conteneurisation
   - [x] Réadapter l'image
-  - [ ] Clean code Docker
+  - [x] Clean code Docker
   
 - [ ] Déployer sur le cloud
   - [ ] Installer les fichiers

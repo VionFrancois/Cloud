@@ -2,23 +2,26 @@ from django.shortcuts import render
 from .forms import FileSelectionForm
 import os
 from django.contrib.auth.decorators import login_required
-from .recherche import *
+
+from .engine import *
 
 
 @login_required
 def index(request):
-    results_dir = 'results'
     if request.method == 'POST':
+        # Create a form with the data from the request
         form = FileSelectionForm(request.POST)
         if form.is_valid():
+            # Get the data from the form
             filename = form.cleaned_data['filename']
             top = form.cleaned_data['top']
+            model = form.cleaned_data['dropdown']
+
             file_path = os.path.join('searchClient/static/', filename)
 
             if os.path.exists(file_path):
-
-                base_image, images, _ = search(filename[:-4], top, "VGG16")
-
+                # Make the search with engine.py
+                base_image, images, _ = search(filename[:-4], top, model)
                 images.insert(0, base_image)
 
                 return render(request, 'searchClient/results.html', {'images': images})

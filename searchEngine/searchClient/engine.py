@@ -51,12 +51,10 @@ def read_features_from_files(folder_model1, files_folder):
 
 def recherche(image_req,top):
   voisins = getkVoisins(features1, features1[image_req],top)
-  #print(voisins)
   nom_images_proches = []
   nom_images_non_proches = []
   for k in range(top):
       nom_images_proches.append(voisins[k][0])
-      #print("done")
 
   nom_image_requete=os.path.splitext(os.path.basename(features1[image_req][0]))[0]
 
@@ -124,8 +122,8 @@ def search(image_req, top, model):
     global features1
     features1 = read_features_from_files(folder_model1, "")
     nom_image_requete, nom_images_proches, nom_images_non_proches = recherche(image_req, top)
-    #compute_RP("RP.txt", top,nom_image_requete, nom_images_non_proches)
-    #display_RP("RP.txt", model)
+    compute_RP("RP.txt", top,nom_image_requete, nom_images_non_proches)
+    display_RP("RP.txt", model)
     
     nom_image_requete += ".jpg"
 
