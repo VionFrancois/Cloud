@@ -4,9 +4,10 @@
   - [ ] Finir le fonctionnement pur
     - [x] Ajouter au formulaire le choix du modèle
     - [ ] Ajouter infos demandées dans l'énoncé
-  - [x] Finir le style
+    - [ ] Faire en sorte que le RP soit propre à un user ?
+  - [ ] Finir le style
     - [ ] TODO dans register.html
-  - [ ] Clean et commenter le code
+  - [x] Clean et commenter le code
 
 - [x] Finir la conteneurisation
   - [x] Réadapter l'image

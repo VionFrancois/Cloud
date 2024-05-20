@@ -1,6 +1,7 @@
 /searchEngine/__pycache__/*
 /searchEngine/searchClient/__pycache__/*
 /searchEngine/users/__pycache__/*
+/searchEngine/searchEngine/__pycache__/*
 /searchEngine/static/RP.png
 /searchEngine/db.sqlite3
 /searchEngine/RP.txt

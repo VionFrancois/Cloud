@@ -23,7 +23,7 @@ def index(request):
                 # Make the search with engine.py
                 base_image, images, _ = search(filename[:-4], top, model)
                 images.insert(0, base_image)
-
+                # Redirect to result.html with all the images requested in parameter
                 return render(request, 'searchClient/results.html', {'images': images})
             else:
                 form.add_error('filename', "Le fichier n'existe pas.")

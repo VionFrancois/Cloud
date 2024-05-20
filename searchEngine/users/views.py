@@ -10,7 +10,6 @@ def register_view(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Account created successfully!')
             return redirect('login')
         else:
             # Display the non valid fields

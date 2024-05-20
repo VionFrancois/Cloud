@@ -8,12 +8,17 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
+#### This file contains the functions that come from the given notebook  ####
+#### Some functions have been modified to fit the project needs          ####
+
+
 def euclidianDistance(l1,l2):
     distance = 0
     length = min(len(l1),len(l2))
     for i in range(length):
         distance += pow((l1[i] - l2[i]), 2)
     return math.sqrt(distance)
+
 
 def getkVoisins(lfeatures, test, k) :
     ldistances = []
@@ -29,7 +34,6 @@ def getkVoisins(lfeatures, test, k) :
 
 files = "image.orig"         #Chemin vers la base d'images
 features1 = []               #Stocker les caractérstiques
-
 
 
 def read_features_from_files(folder_model1, files_folder):
@@ -48,7 +52,6 @@ def read_features_from_files(folder_model1, files_folder):
     return features1
 
 
-
 def recherche(image_req,top):
   voisins = getkVoisins(features1, features1[image_req],top)
   nom_images_proches = []
@@ -64,8 +67,6 @@ def recherche(image_req,top):
   return nom_image_requete, nom_images_proches, nom_images_non_proches
 
 
-
-RP_file=""
 def compute_RP(RP_file, top,nom_image_requete, nom_images_non_proches):
   text_file = open(RP_file, "w")
   rappel_precision=[]
