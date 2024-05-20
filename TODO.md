@@ -3,7 +3,7 @@
 - [ ] Finir le code Django
   - [ ] Finir le fonctionnement pur
     - [x] Ajouter au formulaire le choix du modèle
-    - [ ] Ajouter infos demandées dans l'énoncé
+    - [ ] Ajouter infos demandées dans l'énoncé (infos sur devs et taux de similarité pour chaque image)
     - [ ] Faire en sorte que le RP soit propre à un user ?
   - [ ] Finir le style
     - [ ] TODO dans register.html
