@@ -30,7 +30,7 @@ def login_view(request):
             # Login the user and redirect to the application page
             user = form.get_user()
             login(request, user)
-            return redirect('index')
+            return redirect('/searchClient/index')
         else:
             messages.error(request, 'Invalid credentials')
     else:
@@ -38,9 +38,8 @@ def login_view(request):
     return render(request, 'users/login.html', {'form': form})
 
 
-@login_required
 def index_view(request):
-    return redirect('/searchClient/index')
+    return render(request, 'users/index.html')
 
 
 @login_required

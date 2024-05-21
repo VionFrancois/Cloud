@@ -7,6 +7,9 @@
     - [ ] Faire en sorte que le RP soit propre à un user ?
   - [ ] Finir le style
     - [ ] TODO dans register.html
+    - [ ] Faire style users/index.html
+    - [ ] Mettre Yet Another Amazing Cloud-Base Image Search Engine en dessous du titre
+    - [ ] titre YAACBISE cliquable pour retourner sur /users/index
   - [x] Clean et commenter le code
 
 - [x] Finir la conteneurisation

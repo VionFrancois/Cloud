@@ -18,14 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.shortcuts import redirect
 
-def redirect_to_login(request):
-    return redirect('/users/login')
+def redirect_to_index(request):
+    return redirect('/users/index')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("searchClient/", include("searchClient.urls")),
-    # path('', include('users.urls')),
     path('users/', include('users.urls')),
-    path('', redirect_to_login),
-    # path('', include('django.contrib.auth.urls')),
+    path('', redirect_to_index),
 ]

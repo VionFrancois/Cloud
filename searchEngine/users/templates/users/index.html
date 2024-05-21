@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAACBISE</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <header>
+        <h1>YAACBISE</h1>
+        <h4>(Yet Another Amazin Cloud-Based Image Search Engine)</h4>
+    </header>
+    <main>
+        <section id="developpeurs">
+            <h2>À propos des Développeurs</h2>
+            <div>
+                <p><strong>Groupe 7</strong></p>
+                <p><strong>SAUVAGE Samuel et VION François</p>
+                <p><strong>MA1 Sciences informatique</strong> </p>
+            </div>
+        </section>
+        <section id="fonctionnalites">
+            <h2>Fonctionnalités de l'Application</h2>
+            <ul>
+                <li>Systeme d'authentification</li>
+                <li>Recherche d'images similaires à partir d'une image source</li>
+                <li>Choix parmis trois modèles</li>
+                <li>Affichage de la courbe de rappel</li>
+            </ul>
+        </section>
+        <section id="connexion">
+            <a href="{% url 'login' %}" class="btn-connexion">Se Connecter</a>
+        </section>
+    </main>
+</body>
+</html>

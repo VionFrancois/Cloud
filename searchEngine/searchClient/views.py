@@ -7,7 +7,7 @@ from .engine import *
 
 
 @login_required
-def index(request):
+def index_view(request):
     if request.method == 'POST':
         # Create a form with the data from the request
         form = FileSelectionForm(request.POST)
