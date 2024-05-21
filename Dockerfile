@@ -7,8 +7,8 @@ COPY searchEngine/ /service/searchEngine/
 
 RUN pip install -r /service/searchEngine/requirements.txt
 
-# Opens port 8000
-EXPOSE 8000
+# Opens port 80
+EXPOSE 80
 
 RUN chmod +x /service/searchEngine/start.sh
 

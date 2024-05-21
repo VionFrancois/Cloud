@@ -1,10 +1,10 @@
 # TODO list
 
 - [ ] Finir le code Django
-  - [ ] Finir le fonctionnement pur
+  - [x] Finir le fonctionnement pur
     - [x] Ajouter au formulaire le choix du modèle
-    - [ ] Ajouter infos demandées dans l'énoncé (infos sur devs et taux de similarité pour chaque image)
-    - [ ] Faire en sorte que le RP soit propre à un user ?
+    - [x] Ajouter infos demandées dans l'énoncé (infos sur devs)
+    - [ ] Faire en sorte que le RP soit propre à un user ? => En fait non car on pourrait faire du ddos et flemme (proba plus grande de ddos que la proba que 2 personnes utilisent cette app en même temps)
   - [ ] Finir le style
     - [ ] TODO dans register.html
     - [ ] Faire style users/index.html
