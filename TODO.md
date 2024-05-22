@@ -17,9 +17,11 @@
   - [x] Clean code Docker
   
 - [ ] Déployer sur le cloud
-  - [ ] Installer les fichiers
-  - [ ] Config le programme (si nécessaire)
-  - [ ] Configurer les accès avec ports et services 
+  - [x] Installer les fichiers
+  - [x] Config le programme (si nécessaire)
+  - [x] Configurer les accès avec ports et services 
+  - [ ] Redéployer quand fini
+  - [ ] Supplément : Utiliser nginx et gunicorn ?
 
 - [ ] Faire rapport
   - [ ] Commencer rapport
