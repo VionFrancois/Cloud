@@ -1,7 +1,13 @@
+/* Site title link */
+.site-title-link {
+    cursor: pointer; /* Show pointer cursor on hover to indicate it's clickable */
+    text-align: center; /* Center align the title and subtitle */
+}
+
 /* Site title */
 .site-title {
     font: small-caps bold 48px/1 sans-serif;
-    margin: 20px 0 10px;
+    margin: 20px 0 5px; /* Adjust margin to create space between title and subtitle */
 }
 
 /* Page title */
@@ -20,25 +26,24 @@
 /* Button container */
 .button-container {
     text-align: center; /* Center the button */
-     margin-top: 40px;
+    margin-top: 40px;
 }
 
 /* Button */
 .button {
-    display: inline-block; /* Display button inline */
-    padding: 8px 20px; /* Adjust padding for smaller button */
+    display: inline-block;
+    padding: 8px 20px;
     font-size: 16px;
     background-color: #1988f7;
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; /* Show pointer cursor on hover to indicate it's clickable */
     transition: background-color 0.3s ease;
 }
 
 .button:hover {
     background-color: #0d6aad;
-    text-decoration: none; /* Remove underline on hover */
 }
 
 /* Create a grid layout for the images */

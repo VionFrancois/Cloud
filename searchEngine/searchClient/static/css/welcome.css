@@ -1,0 +1,62 @@
+/* General styles for centering content */
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Site title link */
+.site-title-link {
+    cursor: pointer; /* Show pointer cursor on hover to indicate it's clickable */
+    text-align: center; /* Center align the title and subtitle */
+}
+
+/* Site title */
+.site-title {
+    font: small-caps bold 48px/1 sans-serif;
+    margin: 20px 0 5px; /* Adjust margin to create space between title and subtitle */
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 18px; /* Adjust font size for subtitle */
+    margin-bottom: 20px; /* Add space below the subtitle */
+}
+
+/* Features list */
+.features-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    text-align: center; /* Center the text within the list */
+}
+
+.features-list li {
+    margin: 10px 0; /* Add space between list items */
+}
+
+/* Button container */
+.button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px;
+}
+
+/* Button */
+.button {
+    display: inline-block; /* Display button inline */
+    padding: 8px 20px; /* Adjust padding for smaller button */
+    font-size: 16px;
+    background-color: #1988f7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Show pointer cursor on hover to indicate it's clickable */
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline from the button */
+}
+
+.button:hover {
+    background-color: #0d6aad;
+    text-decoration: none; /* Remove underline on hover */
+}
