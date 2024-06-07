@@ -15,13 +15,14 @@ def index_view(request):
             # Get the data from the form
             filename = form.cleaned_data['filename']
             top = form.cleaned_data['top']
-            model = form.cleaned_data['dropdown']
+            model = form.cleaned_data['dropdown1']
+            dist = form.cleaned_data['dropdown2']
 
             file_path = os.path.join('searchClient/static/', filename)
 
             if os.path.exists(file_path):
                 # Make the search with engine.py
-                base_image, images, _ = search(filename[:-4], top, model)
+                base_image, images, _ = search(filename[:-4], top, model,dist)
                 images.insert(0, base_image)
                 # Redirect to result.html with all the images requested in parameter
                 return render(request, 'searchClient/results.html', {'images': images})

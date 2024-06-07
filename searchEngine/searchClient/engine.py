@@ -12,18 +12,35 @@ warnings.filterwarnings('ignore')
 #### Some functions have been modified to fit the project needs          ####
 
 
-def euclidianDistance(l1,l2):
-    distance = 0
-    length = min(len(l1),len(l2))
-    for i in range(length):
-        distance += pow((l1[i] - l2[i]), 2)
-    return math.sqrt(distance)
+def euclidean(l1, l2):
+    n = min(len(l1), len(l2))
+    return np.sqrt(np.sum((l1[:n] - l2[:n])**2))
 
 
-def getkVoisins(lfeatures, test, k) :
+def chiSquareDistance(l1, l2):
+    n = min(len(l1), len(l2))
+    return np.sum((l1[:n] - l2[:n])**2 / l2[:n])
+
+
+def bhatta(l1, l2):
+    n = min(len(l1), len(l2))
+    N_1, N_2 = np.sum(l1[:n])/n, np.sum(l2[:n])/n
+    score = np.sum(np.sqrt(l1[:n] * l2[:n]))
+    num = round(score, 2)
+    den = round(math.sqrt(N_1*N_2*n*n), 2)
+    return math.sqrt( 1 - num / den )
+
+
+def getkVoisins(lfeatures, test, k, dist_measure):
     ldistances = []
     for i in range(len(lfeatures)):
-        dist = euclidianDistance(test[1], lfeatures[i][1])
+        if dist_measure == "Euclidean":
+          dist = euclidean(test[1], lfeatures[i][1])
+        elif dist_measure == "Chi2":
+          dist = chiSquareDistance(test[1], lfeatures[i][1])
+        else:
+          dist = bhatta(test[1], lfeatures[i][1])
+
         ldistances.append((lfeatures[i][0], lfeatures[i][1], dist))
     ldistances.sort(key=operator.itemgetter(2))
     lvoisins = []
@@ -52,8 +69,8 @@ def read_features_from_files(folder_model1, files_folder):
     return features1
 
 
-def recherche(image_req,top):
-  voisins = getkVoisins(features1, features1[image_req],top)
+def recherche(image_req,top, dist_measure):
+  voisins = getkVoisins(features1, features1[image_req],top, dist_measure)
   nom_images_proches = []
   nom_images_non_proches = []
   for k in range(top):
@@ -111,7 +128,7 @@ def display_RP(fichier, model):
   plt.close()
 
 
-def search(image_req, top, model):
+def search(image_req, top, model, dist_measure):
     image_req = int(image_req)
 
     current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -122,7 +139,7 @@ def search(image_req, top, model):
 
     global features1
     features1 = read_features_from_files(folder_model1, "")
-    nom_image_requete, nom_images_proches, nom_images_non_proches = recherche(image_req, top)
+    nom_image_requete, nom_images_proches, nom_images_non_proches = recherche(image_req, top, dist_measure)
     compute_RP("RP.txt", top,nom_image_requete, nom_images_non_proches)
     display_RP("RP.txt", model)
     

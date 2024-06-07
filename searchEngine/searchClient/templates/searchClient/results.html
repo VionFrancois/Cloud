@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/results.css' %}">
 </head>
 <body>
-    <div class="site-title-link" onclick="window.location.href='{% url 'index' %}'">
+    <div class="site-title-link" onclick="window.location.href='{% url 'search_index' %}'">
         <div class="site-title">YAACBISE</div>
         <h3>Yet Another Amazing Cloud-Based Image Search Engine</h3>
     </div>
@@ -33,7 +33,7 @@
         {% endfor %}
     </div>
     <div class="button-container">
-        <a class="button" href="{% url 'index' %}">Refaire une recherche</a>
+        <a class="button" href="{% url 'search_index' %}">Refaire une recherche</a>
     </div>
 </body>
 </html>
