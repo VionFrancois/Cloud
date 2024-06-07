@@ -1,5 +1,6 @@
 /* Site title */
 .site-title {
+    cursor: pointer; /* Show pointer cursor on hover to indicate it's clickable */
     font: small-caps bold 48px/1 sans-serif;
     margin: 20px 0 10px;
 }

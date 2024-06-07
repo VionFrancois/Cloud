@@ -9,7 +9,6 @@
 
 /* Site title link */
 .site-title-link {
-    cursor: pointer; /* Show pointer cursor on hover to indicate it's clickable */
     text-align: center; /* Center align the title and subtitle */
 }
 
