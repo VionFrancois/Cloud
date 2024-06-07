@@ -29,9 +29,9 @@ LOGIN_REDIRECT_URL = '/searchEngine/index/'
 SECRET_KEY = 'django-insecure-dpf9d#ubl_p1&3bu=dn+@+ba=fqwly3e4m)0qht8qwuk(s%d7^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["163.172.234.166"]
 
 
 # Application definition
