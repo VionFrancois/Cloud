@@ -66,6 +66,9 @@ def read_features_from_files(folder_model1, files_folder):
 
             features1.append((image_path, feature))
 
+    # We sort because os.listdir doesn't guarantee the order
+    features1 = sorted(features1, key=lambda x: int(x[0][:-4]))
+    
     return features1
 
 
