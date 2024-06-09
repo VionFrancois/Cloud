@@ -17,9 +17,9 @@ def euclidean(l1, l2):
     return np.sqrt(np.sum((l1[:n] - l2[:n])**2))
 
 
-def chiSquareDistance(l1, l2):
+def chiSquareDistance(l1, l2, eps=1e-10):
     n = min(len(l1), len(l2))
-    return np.sum((l1[:n] - l2[:n])**2 / l2[:n])
+    return np.sum((l1[:n] - l2[:n])**2 / (l2[:n] + eps))
 
 
 def bhatta(l1, l2):
